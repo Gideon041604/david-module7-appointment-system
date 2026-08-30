@@ -1,82 +1,84 @@
-# Appointment Management System — Frontend
+# Appointment Management System — Prototype
 
 ## Student Information
-- Name: Ruben Puno
+- Name: Gideon David
 - Course and Section: BSCS 3A
 - Subject: Software Engineering 1
 - Module: Module 7 - Design and Implementation
 - Instructor: Patrick Jason L. Torres
 
-## Project Overview
-This is a frontend prototype of the Appointment Management System, implementing the presentation and application-logic layers of the three-tier architecture proposed in Module 6. The application allows users to create, view, update, and delete appointment records, using browser localStorage as a temporary data layer.
+## System Description
+This prototype implements the **Appointment** entity from the Appointment Management System proposed in Module 6. It allows users to add, view, edit, delete, and search appointment records through a Vue.js interface styled with Tailwind CSS.
 
-## Connection to Module 6
-This implementation continues the architectural design documented in the Module 6 repository (`surname-module6-architecture`). The mapping from design to implementation is as follows:
+## Selected Module 6 Entity
+Appointment — with fields: Client Name, Service, Appointment Date, Appointment Time, and Status (Pending / Confirmed / Completed / Cancelled).
 
-| Module 6 Design Element | Module 7 Implementation |
-|---|---|
-| Presentation layer (Vue.js) | Vue Single-File Components styled with Tailwind CSS |
-| Application layer (Node.js/Express) | JavaScript functions in `App.vue` that apply CRUD rules |
-| Data layer (MongoDB Atlas) | Browser localStorage (temporary, for this prototype only) |
-| Primary record: Appointment | `clientName`, `service`, `appointmentDate`, `appointmentTime`, `status` |
+## Implemented Features
+- Create: Add a new appointment record through a validated form
+- Read: View all appointment records in a table
+- Update: Edit an existing appointment record
+- Delete: Remove a record after confirmation
+- Complete: Mark an appointment as completed
+- Search: Filter records by client name or service
+- Validation: Prevents submission with empty required fields
+- Persistence: Records remain after page refresh via browser localStorage
 
-**Note:** localStorage is used only to demonstrate the frontend design-to-code transition. It is not a server database and does not support multiple users. A real API and database remain a future implementation boundary.
+## Technologies Used
+- Vue.js 3 + Vite
+- Tailwind CSS v4
+- JavaScript (Composition API)
+- Browser localStorage
+- Git + GitHub
+- GitHub Actions (CI build check)
 
-## Features Implemented
-1. Create a new appointment.
-2. View all appointments in a table.
-3. Update/reschedule an appointment.
-4. Delete an appointment (with confirmation).
-5. Mark an appointment as completed.
-6. Search/filter appointments by client name or service.
-
-## Technology Stack
-- Frontend Framework: Vue.js 3 (Composition API, `<script setup>`)
-- Build Tool: Vite
-- Styling: Tailwind CSS
-- Data Persistence (prototype only): Browser localStorage
-- Version Control: Git and GitHub
-- Continuous Integration: GitHub Actions (build check on push)
-
-## Project Structure
-```text
-module7-vue-system/
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── public/
-├── src/
-│   ├── assets/
-│   │   └── main.css
-│   ├── components/
-│   │   ├── AppHeader.vue
-│   │   ├── AppointmentForm.vue
-│   │   ├── AppointmentTable.vue
-│   │   ├── SearchBar.vue
-│   │   └── StatusMessage.vue
-│   ├── App.vue
-│   └── main.js
-├── .gitignore
-├── index.html
-├── package.json
-└── vite.config.js
-```
-
-## How to Run Locally
+## Installation and Run Instructions
 ```bash
+git clone https://github.com/Gideon041604/david-module7-appointment-system.git
+cd surname-module7-vue-system
 npm install
 npm run dev
 ```
-Then open the local address shown in the terminal (commonly `http://localhost:5173/`).
+Open the local address shown in the terminal (e.g. http://localhost:5173/).
 
-## How to Build for Production
-```bash
-npm run build
-```
-This generates a `dist/` folder containing the production-ready static files.
+## About localStorage
+This prototype simulates the data layer using the browser's localStorage API. Appointment records are saved as JSON under the key `module7-appointments` and are automatically loaded when the application starts, allowing data to persist across page refreshes without a real backend or database.
 
-## Continuous Integration
-A GitHub Actions workflow (`.github/workflows/ci.yml`) automatically runs `npm ci` and `npm run build` on every push to `main`, verifying that the application builds successfully.
+## Connection Between Module 6 and Module 7
+Module 6 proposed a three-tier architecture (Vue.js frontend, Node.js/Express backend, MongoDB Atlas database) for the full Appointment Management System. Module 7 implements the presentation layer and application logic for one entity (Appointment) as a working frontend prototype, using localStorage in place of the backend and database, which remain proposed future components.
 
-## Project Status
-This is a frontend prototype demonstrating CRUD operations using localStorage. A backend API, MongoDB Atlas connection, authentication, and deployment are not part of this module and remain future extensions.
+## Application Screenshots
+
+### 1. Development Environment
+![Node.js and npm versions](docs/screenshots/environment.png)
+
+### 2. Application Running in the Browser
+![App running in browser](docs/screenshots/running-app.png)
+
+### 3. Create and Read Appointments
+![Create and view appointments](docs/screenshots/create-read.png)
+
+### 4. Update an Appointment
+![Update an appointment](docs/screenshots/update.png)
+
+### 5. Delete an Appointment
+![Delete an appointment](docs/screenshots/delete.png)
+
+### 6. Data Persistence After Refresh
+![Data persists after refresh](docs/screenshots/persistence.png)
+
+### 7. Production Build Success
+![Production build output](docs/screenshots/production-build.png)
+
+### 8. Git Commit History
+![Git commit history](docs/screenshots/commit-history.png)
+
+### 9. GitHub Repository Structure
+![GitHub repository](docs/screenshots/github-repository.png)
+
+### 10. GitHub Actions CI Passing
+![CI workflow passing](docs/screenshots/ci-workflow.png)
+
+## Known Limitations and Future Improvements
+- No real backend, API, or database connection — data is browser local only
+- No conflict detection for overlapping appointment times yet
+- Future versions will connect to the Node.js/Express backend and MongoDB Atlas database proposed in Module 6, and add staff-side scheduling and availability management features
