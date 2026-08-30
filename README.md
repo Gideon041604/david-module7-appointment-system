@@ -49,34 +49,34 @@ Module 6 proposed a three-tier architecture (Vue.js frontend, Node.js/Express ba
 ## Application Screenshots
 
 ### 1. Development Environment
-![Node.js and npm versions](docs/screenshots/environment.png)
+![Node.js and npm versions](docs/screenshots/environment.jpg)
 
 ### 2. Application Running in the Browser
-![App running in browser](docs/screenshots/running-app.png)
+![App running in browser](docs/screenshots/running-app.jpg)
 
 ### 3. Create and Read Appointments
-![Create and view appointments](docs/screenshots/create-read.png)
+![Create and view appointments](docs/screenshots/create-read.jpg)
 
 ### 4. Update an Appointment
-![Update an appointment](docs/screenshots/update.png)
+![Update an appointment](docs/screenshots/update.jpg)
 
 ### 5. Delete an Appointment
-![Delete an appointment](docs/screenshots/delete.png)
+![Delete an appointment](docs/screenshots/delete.jpg)
 
 ### 6. Data Persistence After Refresh
-![Data persists after refresh](docs/screenshots/persistence.png)
+![Data persists after refresh](docs/screenshots/persistence.jpg)
 
 ### 7. Production Build Success
-![Production build output](docs/screenshots/production-build.png)
+![Production build output](docs/screenshots/production-build.jpg)
 
 ### 8. Git Commit History
-![Git commit history](docs/screenshots/commit-history.png)
+![Git commit history](docs/screenshots/commit-history.jpg)
 
 ### 9. GitHub Repository Structure
-![GitHub repository](docs/screenshots/github-repository.png)
+![GitHub repository](docs/screenshots/github-repository.jpg)
 
 ### 10. GitHub Actions CI Passing
-![CI workflow passing](docs/screenshots/ci-workflow.png)
+![CI workflow passing](docs/screenshots/ci-workflow.jpg)
 
 ## Known Limitations and Future Improvements
 - No real backend, API, or database connection — data is browser local only
