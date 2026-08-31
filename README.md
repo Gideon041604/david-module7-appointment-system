@@ -48,35 +48,38 @@ Module 6 proposed a three-tier architecture (Vue.js frontend, Node.js/Express ba
 
 ## Application Screenshots
 
-### 1. Development Environment
-![Node.js and npm versions](docs/screenshots/environment.jpg)
+### 1. Application Running in the Browser
+![Running app](docs/screenshots/running-app.jpg)
 
-### 2. Application Running in the Browser
-![App running in browser](docs/screenshots/running-app.jpg)
+### 2. Add a New Appointment Record
+![Add record](docs/screenshots/add-record.jpg)
 
-### 3. Create and Read Appointments
-![Create and view appointments](docs/screenshots/create-read.jpg)
+### 3. Appointment Record List
+![Record list](docs/screenshots/record-list.jpg)
 
-### 4. Update an Appointment
-![Update an appointment](docs/screenshots/update.jpg)
+### 4. Edit an Appointment Record
+![Edit record](docs/screenshots/edit-record.jpg)
 
-### 5. Delete an Appointment
-![Delete an appointment](docs/screenshots/delete.jpg)
+### 5. Delete Confirmation
+![Delete confirmation](docs/screenshots/delete-confirmation.jpg)
 
-### 6. Data Persistence After Refresh
-![Data persists after refresh](docs/screenshots/persistence.jpg)
+### 6. Search Function
+![Search function](docs/screenshots/search-function.jpg)
 
-### 7. Production Build Success
-![Production build output](docs/screenshots/production-build.jpg)
+### 7. Local Storage Persistence
+![Local storage](docs/screenshots/local-storage.jpg)
 
-### 8. Git Commit History
-![Git commit history](docs/screenshots/commit-history.jpg)
+### 8. Responsive View
+![Responsive view](docs/screenshots/responsive-view.jpg)
 
-### 9. GitHub Repository Structure
+### 9. GitHub Repository
 ![GitHub repository](docs/screenshots/github-repository.jpg)
 
-### 10. GitHub Actions CI Passing
-![CI workflow passing](docs/screenshots/ci-workflow.jpg)
+### 10. Commit History
+![Commit history](docs/screenshots/commit-history.jpg)
+
+### 11. CI Build Success
+![CI success](docs/screenshots/ci-success.jpg)
 
 ## Known Limitations and Future Improvements
 - No real backend, API, or database connection — data is browser local only
