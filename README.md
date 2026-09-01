@@ -34,7 +34,7 @@ Appointment — with fields: Client Name, Service, Appointment Date, Appointment
 ## Installation and Run Instructions
 ```bash
 git clone https://github.com/Gideon041604/david-module7-appointment-system.git
-cd surname-module7-vue-system
+cd david-module7-vue-system
 npm install
 npm run dev
 ```
