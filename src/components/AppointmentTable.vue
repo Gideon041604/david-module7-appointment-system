@@ -1,6 +1,7 @@
 <script setup>
 defineProps({ appointments: Array })
 const emit = defineEmits(['edit', 'remove', 'complete'])
+import { canMarkCompleted } from '../utils/appointments'
 </script>
 
 <template>
@@ -51,7 +52,7 @@ const emit = defineEmits(['edit', 'remove', 'complete'])
                 Edit
               </button>
               <button
-                v-if="item.status !== 'Completed'"
+                v-if="canMarkCompleted(item.status)"
                 @click="emit('complete', item.id)"
                 class="rounded-md border border-green-400/20 bg-green-400/10 px-2.5 py-1 text-xs text-green-300 transition hover:bg-green-400/20"
               >

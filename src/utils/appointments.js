@@ -22,6 +22,6 @@ export function validateAppointment(form) {
 // v-if="item.status !== 'Completed'" — it only blocks already-completed
 // appointments. It does NOT block Cancelled appointments from being
 // marked Completed, which is a logic defect we will catch with a test.
-export function canMarkCompleted(status) {
-  return status !== 'Completed'
+  export function canMarkCompleted(status) {
+  return status !== 'Completed' && status !== 'Cancelled'
 }
