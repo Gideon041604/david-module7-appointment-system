@@ -85,3 +85,22 @@ Module 6 proposed a three-tier architecture (Vue.js frontend, Node.js/Express ba
 - No real backend, API, or database connection — data is browser local only
 - No conflict detection for overlapping appointment times yet
 - Future versions will connect to the Node.js/Express backend and MongoDB Atlas database proposed in Module 6, and add staff-side scheduling and availability management features
+
+## Testing
+
+This project includes automated unit tests using Vitest, alongside manual functional testing.
+
+**Run automated tests:**
+```bash
+npm run test:run
+```
+
+**Result summary:** 7/7 automated tests passing.
+
+**Defect found and fixed:** BUG-01 — Cancelled appointments could previously be marked as
+Completed using the Complete button. This was caught by an automated test
+(`canMarkCompleted` in `src/utils/appointments.js`) and confirmed manually. Fixed by updating
+the business rule so the Complete button no longer appears for Cancelled appointments.
+Status: Fixed and retested.
+
+**CI:** GitHub Actions now runs `npm run test:run` and `npm run build` on every push to `main`.
